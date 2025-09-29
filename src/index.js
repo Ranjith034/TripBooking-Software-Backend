@@ -30,9 +30,8 @@ dotenv.config()
 
 // app.use("*" , cors())
 // app.use(cors());
-const cors = require("cors");
 app.use(cors({
-  origin: ["http://localhost:3000", "https://trip-booking-software-backend.vercel.app/"],
+  origin: ["http://localhost:3000", "https://trip-booking-frontend.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
