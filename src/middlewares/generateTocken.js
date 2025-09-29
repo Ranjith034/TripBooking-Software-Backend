@@ -1,7 +1,7 @@
 // 
 
 const jwt = require("jsonwebtoken");
-const Register = require("../models/User/Register.models"); // make sure path is correct
+const Register = require("../models/User/User.models"); // make sure path is correct
 
 // ================= Generate JWT =================
 const generatetoken = (userId) => {
