@@ -14,7 +14,7 @@ const bookingrouter = require("./routes/User/booking.routes")
 
 const confirmBookingsrouter = require("./routes/User/confirmBookings.routes")
 
-const cors = require("cors")
+// const cors = require("cors")
 
 const path = require('path');
 
@@ -29,7 +29,14 @@ app.use(express.json())
 dotenv.config()
 
 // app.use("*" , cors())
-app.use(cors());
+// app.use(cors());
+const cors = require("cors");
+app.use(cors({
+  origin: ["http://localhost:3000", "https://trip-booking-software-backend.vercel.app/"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 
 app.use('/static', express.static(path.join(__dirname, 'public/Images')));
 
